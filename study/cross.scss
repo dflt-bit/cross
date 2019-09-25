@@ -1,0 +1,194 @@
+.head {
+    display: flex;
+    .start{
+        margin: 0 auto;
+    }
+    .login:last-child{
+        margin-left: 10px;
+    }
+    .start, .login {
+        display: flex;
+        justify-content: center;
+
+        span {
+            background: orange;
+            border: 1px solid green;
+            padding: 5px 10px;
+            color: #fff;
+            font-size: 1.5rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.field{
+    width: 300px;
+    background: lightgrey;
+    display: flex;
+    flex-wrap: wrap;
+    .cell{
+        width: 100px;
+        height: 100px;
+        box-sizing: border-box;
+        border: 1px solid black;
+        text-align: center;
+        position: relative;
+        &.zero{
+            &:before{
+                content: 'O';
+                font-size: 85px;
+                color: red;
+            }
+        }
+        &.cross{
+            &:before{
+                content: ' ';
+                width: 4px;
+                height: 95px;
+                background: red;
+                transform: rotate(45deg);
+                position: absolute;
+                border-radius: 5px;
+            }
+            &:after{
+                content: ' ';
+                width: 4px;
+                height: 95px;
+                background: red;
+                transform: rotate(-45deg);
+                position: absolute;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.scopes{
+    display: flex;
+    flex-direction: row;
+    .column{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid green;
+        div{
+            padding: 10px;
+            background: orange;
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
+}
+
+.wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.popup{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4);
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    .content{
+        display: flex;
+        background: orange;
+        border: 1px solid green;
+        padding: 20px 30px;
+        color: white;
+        font-size: 1.5rem;
+        flex-direction: column;
+        position: relative;
+        .head{
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            justify-content: center;
+        }
+        .body{
+            text-align: center;
+            input{
+                background: none;
+                border-width: 0px 0px 1px 0px;
+                border-style: solid;
+                border-color: green;
+                font-size: 1.2rem;
+                &:focus{
+                    outline: none;
+                }
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                label{
+                    display: flex;
+                    justify-content: space-between;
+                    // text-align: right;
+                    input{
+                        margin-left: 20px;
+                    }
+                    // span{
+                    //     text-align: right;
+                    // }
+                }
+            }
+        }
+        .cross{
+            position: absolute;
+            top: 0;
+            right: 12px;
+            &:before{
+                content: ' ';
+                width: 2px;
+                height: 20px;
+                transform: rotate(45deg);
+                background: white;
+                position: absolute;
+            }
+            &:after{
+                content: ' ';
+                width: 2px;
+                height: 20px;
+                transform: rotate(-45deg);
+                background: white;
+                position: absolute;
+            }
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            span{
+                border: 1px solid green;
+                padding: 5px;
+                text-transform: uppercase;
+                font-size: .8rem;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
